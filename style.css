@@ -36,10 +36,12 @@ main {
 
 .field {
     display: flex;
+flex-wrap: wrap;
 }
 
 .card {
-    margin: 0 15px 0 15px;
+    margin: 30px 15px 30px 15px;
+    width: 17%;
 }
 
 img {
