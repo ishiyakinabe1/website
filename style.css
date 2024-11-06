@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html {
+    font-family: sans-serif;
+
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 0 0 0;
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+header {
+    background-color: white;
+}
+
+header nav ul {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+main {
+    background-color: white;
+    padding: 20px 10px 10px 10px;
+    margin: 30px 10px 30px 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+}
+
+footer nav ul {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+footer nav ul li {
+    list-style-type: none;
+}
