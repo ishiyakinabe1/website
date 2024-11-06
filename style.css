@@ -34,6 +34,11 @@ main {
     margin: 30px 10px 30px 10px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
     text-align: center;
     background-color: white;
