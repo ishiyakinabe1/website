@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>石焼鍋のイラスト公開所</title>
     <meta name="description" content="Xで話題のイラストレーター『石焼鍋』のイラストが見れる所です。以上。">
-    <meta name="viewport" content="width=device-,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <meta name="google-site-verification" content="jVh1t9VdL9B-OvP3mEY9aTVynOBVzmQuzMHnM9lc9pk" />
 </head>
-    
+
 <body>
 <header>
     <header class="header">
@@ -19,63 +19,46 @@
     <nav>
         <ul>
             <li><a href="https://www.youtube.com/@ishiyaki_channel" target="_blank">石焼鍋Youtubeチャンネル</a></li>
-      
         </ul>
     </nav>
 </header>
 <main>
     <h2>イラスト一覧</h2>
     <div class="field">
-        <img data-src="images/halloween.png" alt="ハロウィーン記念イラスト2024"class="lazy">
-        <img data-src="images/tenshinokyozo.jpeg" alt="天使の虚像"class="lazy">
-        <img data-src="images/chinadress.png" alt="チャイナドレス"class="lazy">
-        <img data-src="images/hayarininottemit.png" alt="流行りに乗ってみた"class="lazy">        
-        <img data-src="images/heiwanomakuake.jpeg" alt="平和の幕開け"class="lazy">        
-        <img data-src="images/hinamatsuri2024.png" alt="ひなまつり2024"class="lazy">
-        <img data-src="images/ishiyakinabe.png" alt="石焼鍋"class="lazy">
-        <img data-src="images/kamatteyo.png" alt="かまってよ"class="lazy">
-        <img data-src="images/matataki.gif" alt="瞬き"class="lazy">
-        <img data-src="images/mesugaki.gif" alt="メスガキ"class="lazy">
-        <img data-src="images/nishikihukuza.png" alt="二式複座戦闘機『屠龍』夜間防空任務"class="lazy">
-        <img data-src="images/renaisodan.png" alt="恋愛相談"class="lazy">
-        <img data-src="images/rokokyo.jpeg" alt="盧溝橋事件"class="lazy">
-        <img data-src="images/saigoniiinokosukotobaha.png" alt="最期に言い残す言葉は？"class="lazy">
-        <img data-src="images/syunyo.jpeg" alt="春陽"class="lazy">
-        <img data-src="images/tsureteittekureruno.png" alt="連れて行ってくれるの？"class="lazy">
+        <img data-src="images/halloween.png" alt="ハロウィーン記念イラスト2024" class="lazy">
+        <img data-src="images/tenshinokyozo.jpeg" alt="天使の虚像" class="lazy">
+        <img data-src="images/chinadress.png" alt="チャイナドレス" class="lazy">
+        <img data-src="images/hayarininottemit.png" alt="流行りに乗ってみた" class="lazy">
+        <img data-src="images/heiwanomakuake.jpeg" alt="平和の幕開け" class="lazy">
+        <img data-src="images/hinamatsuri2024.png" alt="ひなまつり2024" class="lazy">
+        <img data-src="images/ishiyakinabe.png" alt="石焼鍋" class="lazy">
+        <img data-src="images/kamatteyo.png" alt="かまってよ" class="lazy">
+        <img data-src="images/matataki.gif" alt="瞬き" class="lazy">
+        <img data-src="images/mesugaki.gif" alt="メスガキ" class="lazy">
+        <img data-src="images/nishikihukuza.png" alt="二式複座戦闘機『屠龍』夜間防空任務" class="lazy">
+        <img data-src="images/renaisodan.png" alt="恋愛相談" class="lazy">
+        <img data-src="images/rokokyo.jpeg" alt="盧溝橋事件" class="lazy">
+        <img data-src="images/saigoniiinokosukotobaha.png" alt="最期に言い残す言葉は？" class="lazy">
+        <img data-src="images/syunyo.jpeg" alt="春陽" class="lazy">
+        <img data-src="images/tsureteittekureruno.png" alt="連れて行ってくれるの？" class="lazy">
+    </div>
+</main>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const lazyImages = document.querySelectorAll('.lazy');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
+      const lazyImages = document.querySelectorAll('.lazy');
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  const img = entry.target;
+                  img.src = img.dataset.src;
+                  img.classList.remove('lazy');
+                  observer.unobserve(img);
+              }
+          });
       });
-    });
-    lazyImages.forEach(img => observer.observe(img));
+      lazyImages.forEach(img => observer.observe(img));
   });
 </script>
-   <div class="card"><img src="images/halloween.png" alt="ハロウィーン記念イラスト2024"></div>
-   <div class="card"><img src="images/tenshinokyozo.jpeg" alt="天使の虚像"></div>
-   <div class="card"><img src="images/chinadress.png" alt="チャイナドレス"></div>
-   <div class="card"><img src="images/hayarininottemit.png" alt="流行りに乗ってみた"></div>
-   <div class="card"><img src="images/heiwanomakuake.jpeg" alt="平和の幕開け"></div>
-   <div class="card"><img src="images/hinamatsuri2024.png" alt="ひなまつり2024"></div>   
-   <div class="card"><img src="images/ishiyakinabe.png" alt="石焼鍋"></div> 
-   <div class="card"><img src="images/kamatteyo.png" alt="かまってよ"></div> 
-   <div class="card"><img src="images/matataki.gif" alt="瞬き"></div> 
-   <div class="card"><img src="images/mesugaki.gif" alt="メスガキ"></div> 
-   <div class="card"><img src="images/nishikihukuza.png" alt="二式複座戦闘機『屠龍』夜間防空任務"></div> 
-   <div class="card"><img src="images/renaisodan.png" alt="恋愛相談"></div> 
-   <div class="card"><img src="images/rokokyo.jpeg" alt="盧溝橋事件"></div> 
-   <div class="card"><img src="images/saigoniiinokosukotobaha.png" alt="最期に言い残す言葉は？"></div> 
-   <div class="card"><img src="images/syunyo.jpeg" alt="春陽"></div> 
-   <div class="card"><img src="images/tsureteittekureruno.png" alt="連れて行ってくれるの？"></div>
-</div>
-</main>
 <footer>
     <nav></nav>
     <p><small>&copy; 2024 ishiyakinabe1.</small></p>
