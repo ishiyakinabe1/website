@@ -26,10 +26,42 @@
 <main>
     <h2>イラスト一覧</h2>
     <div class="field">
+        <img data-src="images/halloween.png" alt="ハロウィーン記念イラスト2024"class="lazy">
+        <img data-src="images/tenshinokyozo.jpeg" alt="天使の虚像"class="lazy">
+        <img data-src="images/chinadress.png" alt="チャイナドレス"class="lazy">
+        <img data-src="images/hayarininottemit.png" alt="流行りに乗ってみた"class="lazy">        
+        <img data-src="images/heiwanomakuake.jpeg" alt="平和の幕開け"class="lazy">        
+        <img data-src="images/hinamatsuri2024.png" alt="ひなまつり2024"class="lazy">
+        <img data-src="images/ishiyakinabe.png" alt="石焼鍋"class="lazy">
+        <img data-src="images/kamatteyo.png" alt="かまってよ"class="lazy">
+        <img data-src="images/matataki.gif" alt="瞬き"class="lazy">
+        <img data-src="images/mesugaki.gif" alt="メスガキ"class="lazy">
+        <img data-src="images/nishikihukuza.png" alt="二式複座戦闘機『屠龍』夜間防空任務"class="lazy">
+        <img data-src="images/renaisodan.png" alt="恋愛相談"class="lazy">
+        <img data-src="images/rokokyo.jpeg" alt="盧溝橋事件"class="lazy">
+        <img data-src="images/saigoniiinokosukotobaha.png" alt="最期に言い残す言葉は？"class="lazy">
+        <img data-src="images/syunyo.jpeg" alt="春陽"class="lazy">
+        <img data-src="images/tsureteittekureruno.png" alt="連れて行ってくれるの？"class="lazy">
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll('.lazy');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
+    });
+    lazyImages.forEach(img => observer.observe(img));
+  });
+</script>
    <div class="card"><img src="images/halloween.png" alt="ハロウィーン記念イラスト2024"></div>
    <div class="card"><img src="images/tenshinokyozo.jpeg" alt="天使の虚像"></div>
    <div class="card"><img src="images/chinadress.png" alt="チャイナドレス"></div>
-   <div class="card"><img src="images/hayarininottemita.png" alt="流行りに乗ってみた"></div>
+   <div class="card"><img src="images/hayarininottemit.png" alt="流行りに乗ってみた"></div>
    <div class="card"><img src="images/heiwanomakuake.jpeg" alt="平和の幕開け"></div>
    <div class="card"><img src="images/hinamatsuri2024.png" alt="ひなまつり2024"></div>   
    <div class="card"><img src="images/ishiyakinabe.png" alt="石焼鍋"></div> 
