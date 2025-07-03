@@ -8,19 +8,16 @@
 
 .item {
     width: 200px;
-    height: 200px; /* サムネイルを正方形に固定 */
-    overflow: hidden; /* はみ出た部分を切る */
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: auto; /* 高さは中身に合わせる */
+    text-align: center;
 }
 
 .thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 元画像の縦横比を崩さず枠に収める */
+    width: 200px;
+    height: 200px; /* サムネイルを正方形に統一 */
+    object-fit: cover; /* 元画像の縦横比を保ちつつ枠内に収める */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -30,42 +27,7 @@
 }
 
 .caption {
-    margin-top: 8px;
+    margin-top: 8px; /* サムネイルとタイトルの間隔 */
     font-size: 14px;
-    text-align: center;
     color: #333;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    box-shadow: 0 0 15px white;
-    object-fit: contain;
-}
-
-#close {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1000;
 }
