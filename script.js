@@ -1,27 +1,25 @@
-// すべてのサムネイル画像を取得
-const thumbnails = document.querySelectorAll('.thumbnail');
-// モーダル関連の要素を取得
-const modal = document.getElementById('modal');
-const modalImage = document.getElementById('modalImage');
-const closeBtn = document.getElementById('close');
+// モーダル表示処理
+const modal = document.getElementById("modal");
+const modalImage = document.getElementById("modalImage");
+const closeBtn = document.getElementById("close");
 
-// 各サムネイル画像にクリックイベントを追加
-thumbnails.forEach(thumbnail => {
-  thumbnail.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImage.src = thumbnail.src;
-    modalImage.alt = thumbnail.alt;
-  });
+// すべてのサムネイルにクリックイベントを追加
+document.querySelectorAll(".thumbnail").forEach(thumbnail => {
+    thumbnail.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImage.src = thumbnail.src;
+        modalImage.alt = thumbnail.alt;
+    });
 });
 
-// 閉じるボタンにクリックイベントを追加
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+// 閉じるボタン
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
 });
 
-// モーダル背景をクリックして閉じる（画像以外の場所）
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
+// モーダル外クリックで閉じる
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 });
