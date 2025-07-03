@@ -8,18 +8,19 @@
 
 .item {
     width: 200px;
-    height: auto; /* 高さは中身に合わせる */
+    height: auto;
     text-align: center;
 }
 
 .thumbnail {
     width: 200px;
-    height: 200px; /* サムネイルを正方形に統一 */
-    object-fit: cover; /* 元画像の縦横比を保ちつつ枠内に収める */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
+    display: block; /* モーダルでズレ防止 */
 }
 
 .thumbnail:hover {
@@ -27,7 +28,40 @@
 }
 
 .caption {
-    margin-top: 8px; /* サムネイルとタイトルの間隔 */
+    margin-top: 8px;
     font-size: 14px;
     color: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px white;
+    object-fit: contain; /* 元画像の縦横比維持 */
+}
+
+#close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
 }
