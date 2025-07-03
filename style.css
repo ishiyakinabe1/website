@@ -15,12 +15,12 @@
 .thumbnail {
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* サムネイルを枠内に収める */
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
-    display: block; /* モーダルでズレ防止 */
+    display: block;
 }
 
 .thumbnail:hover {
@@ -33,35 +33,48 @@
     color: #333;
 }
 
+/* モーダルスタイル (最初の仕様に戻す) */
 .modal {
-    display: none;
+    display: none; /* 初期状態は非表示 */
     position: fixed;
     z-index: 999;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto; /* 縦スクロール対応 */
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-content {
+    display: block;
+    margin: 5% auto; /* 上下中央寄せ */
     max-width: 90%;
     max-height: 90%;
     border-radius: 8px;
     box-shadow: 0 0 15px white;
-    object-fit: contain; /* 元画像の縦横比維持 */
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.7);}
+    to {transform: scale(1);}
 }
 
 #close {
     position: absolute;
-    top: 30px;
-    right: 40px;
-    color: white;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
+    transition: 0.3s;
     cursor: pointer;
-    z-index: 1000;
+}
+
+#close:hover,
+#close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
